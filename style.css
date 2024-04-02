@@ -1,0 +1,435 @@
+body{
+    background: rgb(15, 15, 15);
+    font-family: Roboto;
+    color: #fff;
+}
+.website-title{
+    font-size: 23px;
+    font-family: Pacifico;
+    color: rgb(230, 230, 230);
+    text-align: start;
+}
+ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    background-color: rgb(15, 15, 15);
+    height: 7vh;
+    width:100%;
+    text-align: center;
+    border-radius: 5px;
+}
+ul a:hover{
+    border-bottom: 1px solid darkblue;
+    transform: scale(1.1);
+    border-radius: 3px;
+}
+ul a{
+    font-size: 20px;
+}
+ul li{
+    column-rule-color: #fff;
+    display: grid;
+    place-content: center;
+    margin: 0;
+}
+.menu::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all 2s ease;
+    bottom: 0;
+    left: 0;
+}
+.log-btn{
+    height: 5vh;
+    width: 15vh;
+    font-size: 18px;
+    border: 1px solid rgb(15, 15, 15);
+    background: rgb(49, 49, 49);
+    color: #ffff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.log-btn:hover{
+    border: 1px solid #fff;
+    background-color: rgb(26, 26, 26);
+    transition: 2s;
+}
+.sign-btn{
+    height: 5vh;
+    width: 15vh;
+    font-size: 18px;
+    border: 1px solid rgb(31, 31, 31);
+    background: rgb(49, 49, 49);
+    color: #ffff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.sign-btn:hover{
+    border: 1px solid #fff;
+    background-color: rgb(26, 26, 26);
+    transition: 2s;
+}
+.login-btn-header-div{
+    display: flex;
+    justify-content: end;
+    gap: 1em;
+}
+.entryera{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+input{
+    position: absolute;
+    width: 70vh;
+    outline: none;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 50px;
+    color: #fff;
+    background: transparent;
+    transition: 1s ease;
+    z-index: 1111;
+    border: none;
+    border-bottom: 1px solid rgb(64, 68, 62);
+    border-radius: 6px;
+}
+.labelline{
+    position: absolute;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 10px;
+    margin: 0 20px;
+    background-color: rgb(15, 15, 15);
+    transition: 0.2s ease;
+}
+input:focus,
+input:valid{
+    color: #ffffff;
+    border: 2px solid rgb(6, 0, 92) ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input:focus + .labelline,
+input:valid + .labelline{
+   color: #ffffff;
+   height: 30px;
+   line-height: 30px;
+   transform: translate(-15px, -16px) scale(0.88);
+   z-index: 1111;
+}
+  
+.head-container-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title-movies-container{
+    text-shadow: 2px 2px #363536;
+    text-align: center;
+    font-size: 70px;
+    border-bottom:1px solid rgb(65, 65, 65) ;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.movies-grid{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+.movies-img{
+    vertical-align: middle;
+    padding:0 15px ;
+    overflow-x: auto;
+}
+.movies-img:hover{
+    transform: scale(1.1);
+    
+}
+.movies-title{
+    display: flex;
+    justify-content: center;
+    color: #9e9e9e;
+    text-transform: capitalize;
+
+}
+.movies-with-fam-container-title-div{
+    border-bottom: 1px solid rgb(100, 100, 100);
+    margin-top: -5vh;
+}
+.movies-fam-title{
+    font-size: 70px;
+    text-shadow: 2px 2px rgb(70, 0, 70);
+    text-align: center;
+}
+.movies-fam-grid-div{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    margin-top: 3vh;
+}
+.fam-img:hover{
+    transform: scale(1.1);
+    border: 1px solid grey;
+}
+.fam-title{
+    display: flex;
+    justify-content: center;
+    color: #9e9e9e;
+    text-transform: capitalize;
+}
+.latest-tv-shows-container{
+    color: #c5c5c5;
+    text-transform: capitalize;
+    text-shadow: 2px 2px #363536;
+    text-align: center;
+    font-size: 70px;
+    border-bottom:1px solid rgb(65, 65, 65) ;
+}
+.streaming-platform-title{
+    text-shadow: 2px 2px #682a68;
+    text-align: start;
+    font-size: 49px;
+    padding: 0 20px;
+}
+
+.image-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.scrollable-images{
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    height: 100%;
+}
+  
+.scrollable-images img{
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+    height: 25vh;
+    width: 45vh;
+    
+}
+
+.scrollable-images::-webkit-scrollbar{
+    width: 100px;
+    height: 10px;
+    background: rgb(51, 51, 51);
+    border-radius: 5px;
+}
+.scrollable-images::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: #12033a;
+}
+.popular-companies-title{
+    text-shadow: 2px 5px #12033a;
+    text-align: start;
+    font-size: 50px;
+    padding: 0 20px;
+}
+
+.anime-container-title{
+    font-size: 50px;
+    text-align: start;
+    padding: 0 10px;
+    text-shadow: 2px 2px rgb(33, 33, 78);
+    margin-top: 10vh;
+}
+.anime-img-container-div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.anime-scrollabe-images{
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    height: 100%;
+}
+  
+.anime-scrollabe-images img{
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.anime-scrollabe-images img:hover{
+    border: 1px solid rgb(70, 70, 70);
+}
+
+.anime-scrollabe-images::-webkit-scrollbar{
+    width: 100px;
+    height: 10px;
+    background: rgb(51, 51, 51);
+    border-radius: 5px;
+    
+}
+.anime-scrollabe-images::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: #cccf25;
+}
+
+.children-title{
+    font-size: 60px;
+    justify-content: start;
+    padding: 0 15px;
+    text-shadow: 2px 3px rgb(0, 0, 43);
+    border-top: 1px solid rgb(44, 44, 44);
+    margin-top: 5vh;
+}
+.children-movies-container-grid{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    margin-top: 3vh;
+    margin-left: 2vh;
+}
+.child-img:hover{
+    transform: scale(1.1);
+    border: 1px solid grey;
+}
+.child-title{
+    display: flex;
+    justify-content: center;
+    color: #5e5e5e;
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .final-container-div{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgb(46, 46, 46);  
+    margin-top: 10vh;
+}
